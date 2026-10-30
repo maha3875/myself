@@ -151,7 +151,7 @@ export const AboutSection: React.FC = () => {
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                   <span className="font-display font-bold text-white text-base">Quick Snapshot</span>
                   <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-cyan-950 text-cyan-300 border border-cyan-800">
-                    maharajanc.com
+                    {profileData.domain}
                   </span>
                 </div>
 

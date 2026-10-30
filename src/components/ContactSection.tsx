@@ -106,7 +106,7 @@ export const ContactSection: React.FC = () => {
 
               {/* Primary Email */}
               <div className="space-y-1.5">
-                <span className="text-xs font-mono text-cyan-400">Primary Domain Email:</span>
+                <span className="text-xs font-mono text-cyan-400">Direct Email:</span>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800">
                   <span className="font-mono text-xs sm:text-sm text-white select-all">
                     {profileData.contact.email}

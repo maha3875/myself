@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maharajanc.com/sitemap.xml
-
+Sitemap: https://maha3875.github.io/myself/sitemap.xml

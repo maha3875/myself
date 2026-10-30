@@ -102,7 +102,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
         {/* Modal Footer */}
         <div className="flex items-center justify-between pt-2">
           <span className="text-xs font-mono text-slate-400">
-            Published on maharajanc.com
+            Published on Maharajan C • Knowledge Base
           </span>
           <button
             onClick={onClose}

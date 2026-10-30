@@ -1,7 +1,7 @@
 export const profileData = {
   name: "Maharajan C",
   brand: "Maharajan C",
-  domain: "maharajanc.com",
+  domain: "maha3875.github.io/myself",
   tagline: "Technology • Automation • Education • Digital Innovation",
   headline: "Hi, I'm Maharajan C.",
   subheadline: "I build technology that makes work simpler.",
@@ -24,7 +24,7 @@ export const profileData = {
     { label: "Community & Reach", value: "50K+", unit: "Users", description: "TNKalvi, TechPickers & educational content" }
   ],
   contact: {
-    email: "contact@maharajanc.com",
+    email: "maharajanchithiraimuthu@gmail.com",
     alternateEmail: "maharajan.tech@gmail.com",
     location: "Tamil Nadu, India",
     timezone: "IST (UTC+5:30)",

@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://maharajanc.com/</loc>
+    <loc>https://maha3875.github.io/myself/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#about</loc>
+    <loc>https://maha3875.github.io/myself/#about</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#skills</loc>
+    <loc>https://maha3875.github.io/myself/#skills</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#experience</loc>
+    <loc>https://maha3875.github.io/myself/#experience</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#projects</loc>
+    <loc>https://maha3875.github.io/myself/#projects</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#automation-lab</loc>
+    <loc>https://maha3875.github.io/myself/#automation-lab</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#content</loc>
+    <loc>https://maha3875.github.io/myself/#content</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#articles</loc>
+    <loc>https://maha3875.github.io/myself/#articles</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maharajanc.com/#contact</loc>
+    <loc>https://maha3875.github.io/myself/#contact</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
-
