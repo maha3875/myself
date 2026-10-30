@@ -11,7 +11,10 @@ import {
   Mail, 
   Cpu, 
   Sparkles,
-  Command
+  Command,
+  Layers,
+  Globe,
+  Tv
 } from 'lucide-react';
 import { Youtube } from './Icons';
 import { profileData } from '../data/profile';
@@ -29,9 +32,6 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         if (isOpen) onClose();
-        else {
-          // Open
-        }
       }
       if (e.key === 'Escape' && isOpen) {
         onClose();
@@ -45,21 +45,20 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
   if (!isOpen) return null;
 
   const commands = [
-    { label: 'Go to Home Hero & Diagnostics', href: '#home', category: 'Navigation', icon: Command },
-    { label: 'About Maharajan C & Core Principles', href: '#about', category: 'Navigation', icon: User },
-    { label: 'Explore 35+ Technical Skills', href: '#skills', category: 'Navigation', icon: Cpu },
-    { label: '14+ Years Technology Journey Timeline', href: '#experience', category: 'Navigation', icon: Clock },
-    { label: 'Featured Projects (TNKalvi, TechPickers)', href: '#projects', category: 'Navigation', icon: FolderGit2 },
-    { label: 'Interactive Automation Lab (Run Live Demos)', href: '#automation-lab', category: 'Navigation', icon: Zap },
-    { label: 'YouTube Content & Video Tutorials', href: '#content', category: 'Navigation', icon: Youtube },
-    { label: 'Technical Tutorials & SysAdmin Notes', href: '#articles', category: 'Navigation', icon: BookOpen },
-    { label: 'Contact Maharajan & Book Consultation', href: '#contact', category: 'Navigation', icon: Mail },
+    { label: 'Go to Hero & Terminal Cockpit', href: '#home', category: 'Navigation', icon: Command },
+    { label: 'Core Domains: Interactive Bento Grid', href: '#domains', category: 'Navigation', icon: Layers },
+    { label: 'Featured Projects (Techpickers, TN Kalvi)', href: '#projects', category: 'Navigation', icon: FolderGit2 },
+    { label: 'Tech Stack & Infrastructure Ticker', href: '#tech-stack', category: 'Navigation', icon: Cpu },
+    { label: 'Autonomous Automation Lab (Run Live Demos)', href: '#automation-lab', category: 'Navigation', icon: Zap },
+    { label: 'Creator Media Channels (Maha Techz & Last Bench)', href: '#content', category: 'Navigation', icon: Tv },
+    { label: 'Contact Maharajan & Send Project Brief', href: '#contact', category: 'Navigation', icon: Mail },
     
-    // Quick Actions
-    { label: 'Platform: TechPickers Gear Reviews', href: 'https://techpickers.com', category: 'External', icon: Sparkles, external: true },
-    { label: 'Platform: TNKalvi EdTech Portal', href: 'https://tnkalvi.com', category: 'External', icon: Sparkles, external: true },
-    { label: 'Official YouTube Channel', href: profileData.contact.socials.youtube, category: 'External', icon: Youtube, external: true },
-    { label: 'GitHub Repositories', href: profileData.contact.socials.github, category: 'External', icon: Command, external: true },
+    // Quick Platforms
+    { label: 'Techpickers Specification Portal', href: 'https://techpickers.in', category: 'Platform', icon: Globe, external: true },
+    { label: 'TN Kalvi Online Resource Platform', href: 'https://tnkalvi.online', category: 'Platform', icon: Globe, external: true },
+    { label: 'Maha Techz YouTube Channel', href: profileData.contact.socials.youtube, category: 'Creator', icon: Youtube, external: true },
+    { label: 'Last Bench Creators (3D Animation)', href: profileData.contact.socials.youtubeLastBench, category: 'Creator', icon: Youtube, external: true },
+    { label: 'GitHub Repositories (@maha3875)', href: profileData.contact.socials.github, category: 'Code', icon: Command, external: true },
   ];
 
   const filteredCommands = commands.filter(cmd => 
@@ -90,7 +89,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
             autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type a section or action (e.g. Automation, Skills, TNKalvi)..."
+            placeholder="Type a section or tool (e.g. Next.js, n8n, Techpickers, RPi)..."
             className="w-full bg-transparent text-sm font-mono text-white placeholder:text-slate-500 outline-none"
           />
           <button

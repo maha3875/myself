@@ -6,7 +6,7 @@ import {
   Clock, 
   Sparkles, 
   Tv, 
-  BookOpen, 
+  Video, 
   Layers 
 } from 'lucide-react';
 import { Youtube } from './Icons';
@@ -14,19 +14,18 @@ import { contentVideos } from '../data/content';
 import { profileData } from '../data/profile';
 
 export const ContentSection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedChannel, setSelectedChannel] = useState<string>('all');
 
-  const categories = [
-    { id: 'all', label: 'All Content' },
-    { id: 'Google Workspace', label: 'Google Workspace' },
-    { id: 'Automation & Excel', label: 'Automation & Excel' },
-    { id: 'IT & Networking', label: 'IT & Networking' },
-    { id: 'Tech Guides', label: 'Tamil Tech & Guides' }
+  const channels = [
+    { id: 'all', label: 'All Media & Channels' },
+    { id: 'Maha Techz', label: 'Maha Techz (Hardware & Reviews)' },
+    { id: 'Last Bench Creators', label: 'Last Bench Creators (3D Animation)' },
+    { id: 'Maha Tech Automation', label: 'Maha Tech Automation (n8n & Dev)' }
   ];
 
   const filteredVideos = contentVideos.filter(video => {
-    if (selectedCategory === 'all') return true;
-    return video.category === selectedCategory;
+    if (selectedChannel === 'all') return true;
+    return video.channel === selectedChannel;
   });
 
   return (
@@ -38,41 +37,54 @@ export const ContentSection: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-950/80 border border-rose-800/60 text-xs font-mono text-rose-300 mb-3">
               <Youtube className="w-3.5 h-3.5 text-rose-400" />
-              <span>CONTENT & EDUCATIONAL MEDIA</span>
+              <span>DIGITAL MEDIA &amp; CREATOR CHANNELS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight">
-              Empowering Through <span className="gradient-text">Video Masterclasses</span>
+              3D Animation &amp; <span className="gradient-text">Tech Media Hub</span>
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl text-base">
-              Practical, no-fluff tutorials guiding educators, students, and IT practitioners in Google Workspace, networking, and institutional automation.
+              High-energy storytelling with 3D animated skits on <strong className="text-purple-300">Last Bench Creators</strong>, alongside hardware breakdowns and automation guides on <strong className="text-cyan-300">Maha Techz</strong>.
             </p>
           </div>
 
-          <a
-            href={profileData.contact.socials.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-xs font-mono flex items-center gap-2 shadow-lg shadow-rose-600/25 transition-all self-start md:self-auto"
-          >
-            <Youtube className="w-4 h-4 fill-current" />
-            <span>Visit YouTube Channel</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href={profileData.contact.socials.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-xs font-mono flex items-center gap-1.5 shadow-md shadow-rose-600/25 transition-all"
+            >
+              <Youtube className="w-3.5 h-3.5 fill-current" />
+              <span>Maha Techz</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+
+            <a
+              href={profileData.contact.socials.youtubeLastBench}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold text-xs font-mono flex items-center gap-1.5 shadow-md shadow-purple-600/25 transition-all"
+            >
+              <Video className="w-3.5 h-3.5" />
+              <span>Last Bench Creators</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
         </div>
 
-        {/* Category Filters */}
+        {/* Channel Filter Pills */}
         <div className="flex items-center gap-2 pb-4 mb-8 overflow-x-auto no-scrollbar font-mono text-xs">
-          {categories.map((cat) => (
+          {channels.map((chan) => (
             <button
-              key={cat.id}
-              onClick={() => setSelectedCategory(cat.id)}
+              key={chan.id}
+              onClick={() => setSelectedChannel(chan.id)}
               className={`px-4 py-2 rounded-xl transition-all whitespace-nowrap font-semibold ${
-                selectedCategory === cat.id
+                selectedChannel === chan.id
                   ? 'bg-rose-500 text-white shadow-md shadow-rose-500/20'
                   : 'bg-slate-900/80 text-slate-400 hover:text-white border border-slate-800'
               }`}
             >
-              {cat.label}
+              {chan.label}
             </button>
           ))}
         </div>
@@ -86,7 +98,7 @@ export const ContentSection: React.FC = () => {
             >
               <div className="p-6 space-y-4">
                 
-                {/* Thumbnail Simulation / Banner */}
+                {/* Visual Thumbnail Frame */}
                 <div className="relative aspect-video rounded-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-800/80 flex items-center justify-center overflow-hidden group-hover:border-rose-500/30 transition-all">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
                   
@@ -96,10 +108,10 @@ export const ContentSection: React.FC = () => {
                   </div>
 
                   {/* Badges on Thumbnail */}
-                  <span className="absolute bottom-3 left-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/80 text-rose-300 border border-rose-900/60 z-10">
+                  <span className="absolute bottom-3 left-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/85 text-rose-300 border border-rose-900/60 z-10">
                     {video.channel}
                   </span>
-                  <span className="absolute bottom-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/80 text-slate-300 z-10 flex items-center gap-1">
+                  <span className="absolute bottom-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded bg-black/85 text-slate-300 z-10 flex items-center gap-1">
                     <Clock className="w-3 h-3" /> {video.duration}
                   </span>
                 </div>
@@ -107,7 +119,7 @@ export const ContentSection: React.FC = () => {
                 {/* Video Info */}
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-1.5">
-                    <span className="text-rose-400 font-semibold">{video.category}</span>
+                    <span className="text-cyan-400 font-semibold">{video.channel}</span>
                     <span className="flex items-center gap-1"><Eye className="w-3 h-3" /> {video.views}</span>
                   </div>
                   <h3 className="text-base font-display font-bold text-white group-hover:text-rose-300 transition-colors line-clamp-2">
@@ -126,7 +138,7 @@ export const ContentSection: React.FC = () => {
                       key={tIdx}
                       className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800"
                     >
-                      {tag}
+                      #{tag}
                     </span>
                   ))}
                 </div>
@@ -145,31 +157,13 @@ export const ContentSection: React.FC = () => {
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
 
-                <span className="text-[11px] font-mono text-slate-400">
-                  HD Tutorial
+                <span className="text-[11px] font-mono text-slate-500">
+                  HD Media
                 </span>
               </div>
 
             </div>
           ))}
-        </div>
-
-        {/* Channel Banner Callout */}
-        <div className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-rose-950/40 via-slate-900/60 to-indigo-950/40 border border-rose-900/30 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center md:text-left">
-            <h3 className="text-xl font-display font-bold text-white">
-              Want custom tech tutorials for your school or team?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300">
-              I produce customized training videos, administrative onboarding walkthroughs, and automated workflow guides.
-            </p>
-          </div>
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-xs font-mono whitespace-nowrap transition-all shadow-lg"
-          >
-            Request Training / Consultation
-          </a>
         </div>
 
       </div>

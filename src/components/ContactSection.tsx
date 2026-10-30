@@ -7,10 +7,10 @@ import {
   Send, 
   Copy, 
   Check, 
-  MessageSquare, 
   CheckCircle2, 
   Sparkles,
-  PhoneCall
+  ExternalLink,
+  MessageSquare
 } from 'lucide-react';
 import { Github, Youtube, Linkedin, Twitter } from './Icons';
 import { profileData } from '../data/profile';
@@ -44,7 +44,7 @@ export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'IT Infrastructure & Automation',
+    subject: 'Autonomous Automation / Edge Systems',
     message: ''
   });
 
@@ -66,7 +66,7 @@ export const ContactSection: React.FC = () => {
         spread: 70,
         origin: { y: 0.7 }
       });
-    }, 1000);
+    }, 900);
   };
 
   return (
@@ -77,13 +77,13 @@ export const ContactSection: React.FC = () => {
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-xs font-mono text-cyan-300 mb-3">
             <Mail className="w-3.5 h-3.5 text-cyan-400" />
-            <span>LET&apos;S COLLABORATE</span>
+            <span>COMMUNICATION & COLLABORATION</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight">
-            Start a Conversation with <span className="gradient-text">Maharajan C</span>
+            Let&apos;s Build at <span className="gradient-text">Terminal Velocity</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Whether you need enterprise Google Workspace / M365 deployment, custom Google Apps Script automation, campus network architecture, or educational consultation.
+            Whether you need autonomous workflow architectures, high-performance edge web applications, embedded prototypes, or creative digital media.
           </p>
         </div>
 
@@ -100,26 +100,36 @@ export const ContactSection: React.FC = () => {
                 </span>
                 <span className="flex items-center gap-1.5 text-xs font-mono text-emerald-400">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Active Response
+                  Active Builder
                 </span>
               </div>
 
               {/* Primary Email */}
               <div className="space-y-1.5">
-                <span className="text-xs font-mono text-cyan-400">Direct Email:</span>
+                <span className="text-xs font-mono text-cyan-400">Direct Contact Email:</span>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800">
-                  <span className="font-mono text-xs sm:text-sm text-white select-all">
+                  <span className="font-mono text-xs sm:text-sm text-white select-all break-all">
                     {profileData.contact.email}
                   </span>
                   <button
                     onClick={() => handleCopyEmail(profileData.contact.email)}
-                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors shrink-0 ml-2"
                     title="Copy Email"
                   >
                     {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
                   </button>
                 </div>
               </div>
+
+              {/* Clean Mailto Action Button */}
+              <a
+                href={`mailto:${profileData.contact.email}?subject=Project%20Inquiry%20-%20Maharajan%20Chithiraimuthu`}
+                className="w-full py-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 font-mono text-xs flex items-center justify-center gap-2 transition-all"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                <span>Open Mail Client</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
 
               {/* Location & Timezone Live Status */}
               <div className="grid grid-cols-2 gap-3 pt-2">
@@ -146,31 +156,21 @@ export const ContactSection: React.FC = () => {
 
             </div>
 
-            {/* Social & Channel Networks */}
+            {/* Social & Creator Media Networks */}
             <div className="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-4">
               <span className="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold block">
-                Official Channels & Profiles
+                Creator Channels &amp; Profiles
               </span>
 
-              <div className="grid grid-cols-2 gap-3">
-                <a
-                  href={profileData.contact.socials.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-slate-950 hover:bg-rose-950/40 border border-slate-800 hover:border-rose-800/60 text-slate-300 hover:text-rose-300 flex items-center gap-2.5 transition-all text-xs font-mono"
-                >
-                  <Youtube className="w-4 h-4 text-rose-400" />
-                  <span>YouTube</span>
-                </a>
-
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <a
                   href={profileData.contact.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white flex items-center gap-2.5 transition-all text-xs font-mono"
                 >
-                  <Github className="w-4 h-4 text-cyan-400" />
-                  <span>GitHub</span>
+                  <Github className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <span className="truncate">GitHub (maha3875)</span>
                 </a>
 
                 <a
@@ -179,18 +179,28 @@ export const ContactSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-slate-950 hover:bg-blue-950/40 border border-slate-800 hover:border-blue-800/60 text-slate-300 hover:text-blue-300 flex items-center gap-2.5 transition-all text-xs font-mono"
                 >
-                  <Linkedin className="w-4 h-4 text-blue-400" />
+                  <Linkedin className="w-4 h-4 text-blue-400 shrink-0" />
                   <span>LinkedIn</span>
                 </a>
 
                 <a
-                  href={profileData.contact.socials.twitter}
+                  href={profileData.contact.socials.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-slate-950 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-800/60 text-slate-300 hover:text-cyan-300 flex items-center gap-2.5 transition-all text-xs font-mono"
+                  className="p-3 rounded-xl bg-slate-950 hover:bg-rose-950/40 border border-slate-800 hover:border-rose-800/60 text-slate-300 hover:text-rose-300 flex items-center gap-2.5 transition-all text-xs font-mono"
                 >
-                  <Twitter className="w-4 h-4 text-cyan-400" />
-                  <span>Twitter / X</span>
+                  <Youtube className="w-4 h-4 text-rose-400 shrink-0" />
+                  <span>Maha Techz</span>
+                </a>
+
+                <a
+                  href={profileData.contact.socials.youtubeLastBench}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-xl bg-slate-950 hover:bg-purple-950/40 border border-slate-800 hover:border-purple-800/60 text-slate-300 hover:text-purple-300 flex items-center gap-2.5 transition-all text-xs font-mono"
+                >
+                  <Youtube className="w-4 h-4 text-purple-400 shrink-0" />
+                  <span>Last Bench Creators</span>
                 </a>
               </div>
             </div>
@@ -202,10 +212,10 @@ export const ContactSection: React.FC = () => {
             <div className="p-7 sm:p-9 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-2xl relative">
               
               <h3 className="text-xl sm:text-2xl font-display font-bold text-white mb-2">
-                Send a Message or Project Brief
+                Send a Message or Technical Brief
               </h3>
               <p className="text-xs sm:text-sm text-slate-400 mb-6 font-mono">
-                Have a project or technical challenge? Leave your note below and I&apos;ll get back to you promptly.
+                Have a software project, automation pipeline, or hardware concept? Drop your note below.
               </p>
 
               {formSubmitted ? (
@@ -214,15 +224,15 @@ export const ContactSection: React.FC = () => {
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h4 className="text-xl font-display font-bold text-white">
-                    Thank You, {formData.name || 'Friend'}!
+                    Message Received, {formData.name || 'Friend'}!
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                    Your message regarding &ldquo;{formData.subject}&rdquo; has been noted. I look forward to speaking with you!
+                    Thank you for reaching out regarding &ldquo;{formData.subject}&rdquo;. I will review your note and respond promptly.
                   </p>
                   <button
                     onClick={() => {
                       setFormSubmitted(false);
-                      setFormData({ name: '', email: '', subject: 'IT Infrastructure & Automation', message: '' });
+                      setFormData({ name: '', email: '', subject: 'Autonomous Automation / Edge Systems', message: '' });
                     }}
                     className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-mono text-slate-300 hover:text-white transition-colors"
                   >
@@ -255,7 +265,7 @@ export const ContactSection: React.FC = () => {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="e.g. ramesh@institution.org"
+                        placeholder="e.g. ramesh@company.com"
                         className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 focus:border-cyan-500 text-xs sm:text-sm font-sans text-white placeholder:text-slate-500 outline-none transition-colors"
                       />
                     </div>
@@ -263,32 +273,31 @@ export const ContactSection: React.FC = () => {
 
                   <div>
                     <label className="block text-xs font-mono text-slate-400 mb-1.5">
-                      Consultation / Project Focus
+                      Focus Area / Topic
                     </label>
                     <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 focus:border-cyan-500 text-xs sm:text-sm font-sans text-white outline-none transition-colors"
                     >
-                      <option value="Google Workspace / M365 Setup">Google Workspace / Microsoft 365 Setup & Migration</option>
-                      <option value="Custom Google Apps Script Automation">Custom Google Apps Script / Sheet Automation</option>
-                      <option value="Excel VBA Macro Optimization">Excel VBA Macro Development & Optimization</option>
-                      <option value="Campus Network Architecture">Campus Network & Firewall Setup (MikroTik / Cisco)</option>
-                      <option value="Educational Portal / TNKalvi / TechPickers">EdTech Collaboration / TNKalvi / TechPickers</option>
-                      <option value="General Technical Consultation">General Technical Advisory</option>
+                      <option value="Autonomous Automation / Edge Systems">Autonomous Automation (n8n, Docker, Python)</option>
+                      <option value="Full-Stack Edge Web App (Next.js, Supabase)">Full-Stack Edge Web App (Next.js, Supabase)</option>
+                      <option value="Embedded Silicon / Hardware Prototyping">Embedded Silicon / Hardware Prototyping (Arduino / RPi)</option>
+                      <option value="Digital Media / 3D Animation Production">Digital Media / 3D Animation (Last Bench Creators)</option>
+                      <option value="Tech Consultation & Architecture Advisory">Technical Advisory &amp; Architecture</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-xs font-mono text-slate-400 mb-1.5">
-                      Message / Project Details *
+                      Project Brief / Message *
                     </label>
                     <textarea
                       required
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Briefly describe your requirements or challenge..."
+                      placeholder="Briefly describe your concept, challenge, or timeline..."
                       className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-cyan-500 text-xs sm:text-sm font-sans text-white placeholder:text-slate-500 outline-none transition-colors resize-none"
                     />
                   </div>
@@ -299,7 +308,7 @@ export const ContactSection: React.FC = () => {
                     className="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-indigo-600 text-slate-950 font-bold text-xs sm:text-sm font-sans flex items-center justify-center gap-2 hover:brightness-110 shadow-lg shadow-cyan-500/20 disabled:opacity-50 transition-all"
                   >
                     <Send className="w-4 h-4" />
-                    <span>{isSubmitting ? 'Transmitting Message...' : 'Send Message to Maharajan'}</span>
+                    <span>{isSubmitting ? 'Transmitting Brief...' : 'Send Message to Maharajan'}</span>
                   </button>
                 </form>
               )}

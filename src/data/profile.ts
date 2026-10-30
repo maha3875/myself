@@ -1,40 +1,43 @@
 export const profileData = {
-  name: "Maharajan C",
-  brand: "Maharajan C",
+  name: "Maharajan Chithiraimuthu",
+  shortName: "Maharajan C",
+  brand: "Maharajan Chithiraimuthu",
   domain: "maha3875.github.io/myself",
-  tagline: "Technology • Automation • Education • Digital Innovation",
-  headline: "Hi, I'm Maharajan C.",
-  subheadline: "I build technology that makes work simpler.",
+  badge: "📍 Thoothukudi, India | ⚡ Autonomous Builder",
+  tagline: "Turning wild ideas into shipped software, physical prototypes, and high-energy digital media at terminal velocity.",
+  headline: "Maharajan Chithiraimuthu",
+  subheadline: "Full-Stack Developer • Automation Architect • Creative Technologist",
   roles: [
-    "Technical Assistant",
-    "IT Professional",
-    "Automation Enthusiast",
-    "Digital Creator"
+    "Full-Stack Developer",
+    "Automation Architect",
+    "Embedded & Hardware Hacker",
+    "Creative Technologist & Media Creator"
   ],
-  bioShort: "14+ years of hands-on technical experience bridging robust IT infrastructure, enterprise cloud suites, and intelligent custom automations for education and institutional operations.",
+  bioShort: "Building high-performance edge web apps, autonomous self-hosted orchestration pipelines with Docker and n8n, embedded micro-controller devices, and high-energy 3D digital media.",
   bioLong: [
-    "With over 14 years in the technology trenches, I have designed, managed, and optimized mission-critical IT infrastructure for educational institutions, SMBs, and digital initiatives.",
-    "My journey began with hands-on computer hardware, local area network engineering, and Windows/Linux server administration. As computing evolved, I spearheaded transitions into Google Workspace and Microsoft 365, turning scattered spreadsheets and manual record-keeping into automated, fault-tolerant digital pipelines.",
-    "I believe that automation isn't about replacing people—it's about eliminating tedious, error-prone manual labor so educators, administrators, and teams can focus on what truly matters: teaching, learning, and high-impact decision-making."
+    "I operate at the intersection of full-stack edge software, autonomous infrastructure pipelines, hardware prototyping, and digital media production.",
+    "From engineering high-traffic portals like Techpickers and TN Kalvi Online powered by Cloudflare Workers and Supabase, to deploying self-hosted n8n instances on Docker with reverse-proxied Caddy setups and custom Python pipelines, I build technology that eliminates friction and scales smoothly.",
+    "When I step away from code terminals, you'll find me soldering circuit traces on Arduino Uno R4 and Raspberry Pi boards, prototyping automotive dashboards, or rendering 3D animated skits for Last Bench Creators and producing tech teardowns on Maha Techz."
   ],
   stats: [
-    { label: "Experience", value: "14+", unit: "Years", description: "Technical infrastructure & systems management" },
-    { label: "Domain Expertise", value: "IT + EdTech", unit: "Focus", description: "Institutional systems, campus networks & cloud" },
-    { label: "Automations", value: "85+", unit: "Built", description: "Google Apps Script, Python, VBA & webhooks" },
-    { label: "Community & Reach", value: "50K+", unit: "Users", description: "TNKalvi, TechPickers & educational content" }
+    { label: "Systems & Deployments", value: "60+", unit: "Shipped", description: "Edge web apps, APIs, microservices & scripts" },
+    { label: "Automated Workflows", value: "120+", unit: "Pipelines", description: "Self-hosted n8n, Docker, Python & Apps Script" },
+    { label: "Embedded Prototypes", value: "25+", unit: "Builds", description: "Arduino Uno R4, Raspberry Pi, TFT & CAN-bus" },
+    { label: "Creator Reach", value: "100K+", unit: "Views", description: "Maha Techz, Last Bench Creators & TN Kalvi" }
   ],
   contact: {
     email: "maharajanchithiraimuthu@gmail.com",
     alternateEmail: "maharajan.tech@gmail.com",
-    location: "Tamil Nadu, India",
+    location: "Thoothukudi, Tamil Nadu, India",
     timezone: "IST (UTC+5:30)",
-    availability: "Open to Consultations, IT Architecture & Automation Projects",
+    availability: "Available for High-Impact Software Engineering & Automation Architecture",
     socials: {
-      youtube: "https://youtube.com/@maharajan",
       github: "https://github.com/maha3875",
       linkedin: "https://linkedin.com/in/maharajan-c",
+      youtube: "https://youtube.com/@mahatechz",
+      youtubeAutomation: "https://youtube.com/@mahatechautomation",
+      youtubeLastBench: "https://youtube.com/@lastbenchcreators",
       twitter: "https://twitter.com/maharajanc"
     }
   }
 };
-

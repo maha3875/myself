@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Menu, X, ArrowUpRight, Search, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Search, Sparkles, Layers } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 interface NavbarProps {
@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ['home', 'about', 'skills', 'experience', 'projects', 'automation-lab', 'content', 'articles', 'contact'];
+      const sections = ['home', 'domains', 'projects', 'tech-stack', 'automation-lab', 'content', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -37,13 +37,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette }) => {
 
   const navLinks = [
     { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Skills', href: '#skills', id: 'skills' },
-    { name: 'Experience', href: '#experience', id: 'experience' },
+    { name: 'Systems & Domains', href: '#domains', id: 'domains' },
     { name: 'Projects', href: '#projects', id: 'projects' },
-    { name: 'Automation Lab', href: '#automation-lab', id: 'automation-lab', badge: 'Interactive' },
-    { name: 'Content', href: '#content', id: 'content' },
-    { name: 'Articles', href: '#articles', id: 'articles' },
+    { name: 'Tech Stack', href: '#tech-stack', id: 'tech-stack' },
+    { name: 'Automation Lab', href: '#automation-lab', id: 'automation-lab', badge: 'Live Lab' },
+    { name: 'Creator Media', href: '#content', id: 'content' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -65,15 +63,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette }) => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-display font-bold text-lg text-white tracking-tight group-hover:text-cyan-400 transition-colors whitespace-nowrap">
+                <span className="font-display font-bold text-base sm:text-lg text-white tracking-tight group-hover:text-cyan-400 transition-colors whitespace-nowrap">
                   {profileData.brand}
                 </span>
-                <span className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 rounded whitespace-nowrap">
-                  IT & Automation
+                <span className="hidden md:inline-block px-1.5 py-0.5 text-[10px] font-mono uppercase tracking-wider bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 rounded whitespace-nowrap">
+                  Full-Stack &amp; Automation
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-mono tracking-tight -mt-0.5 hidden sm:block">
-                {profileData.domain}
+                📍 Thoothukudi, India
               </p>
             </div>
           </a>

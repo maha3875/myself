@@ -2,70 +2,69 @@ import { ContentVideo } from '../types';
 
 export const contentVideos: ContentVideo[] = [
   {
-    id: "yt-1",
-    title: "Google Workspace for Education: Complete Admin Setup from Scratch",
-    channel: "Maharajan C / Tech & Education",
-    duration: "28:45",
-    views: "34K views",
-    category: "Google Workspace",
-    description: "Step-by-step masterclass covering domain verification, TXT records, Organizational Unit hierarchy, user accounts, and security baselines.",
-    tags: ["Google Workspace", "Admin Console", "EdTech", "Tutorial"],
-    url: "https://youtube.com/@maharajan"
-  },
-  {
-    id: "yt-2",
-    title: "How to Build an Automated Certificate Generator with Google Sheets & Apps Script",
-    channel: "TNKalvi & Tech Hub",
-    duration: "18:12",
-    views: "52K views",
+    id: "vid-1",
+    title: "Deploying Self-Hosted n8n on Docker with Caddy Automatic SSL (Complete Guide)",
+    channel: "Maha Tech Automation",
+    duration: "24:15",
+    views: "18K views",
     category: "Automation & Excel",
-    description: "Learn how to turn Google Form submissions into beautiful PDF certificates sent automatically to students' inboxes with zero third-party paid addons.",
-    tags: ["Apps Script", "Automation", "Google Sheets", "Productivity"],
-    url: "https://youtube.com/@maharajan"
+    description: "Production guide to running an autonomous n8n cluster on Linux with Docker Compose, automated backups, and Caddy reverse proxy routing.",
+    tags: ["n8n", "Docker", "Caddy", "DevOps"],
+    url: "https://youtube.com/@mahatechautomation"
   },
   {
-    id: "yt-3",
-    title: "Campus Networking 101: MikroTik & UniFi AP Setup with VLAN Separation",
-    channel: "TechPickers",
-    duration: "32:10",
-    views: "21K views",
-    category: "IT & Networking",
-    description: "Real-world walkthrough configuring campus Wi-Fi, isolating Staff vs. Student VLANs, bandwidth limiting, and firewall protection against torrenting.",
-    tags: ["MikroTik", "UniFi", "VLAN", "Networking"],
-    url: "https://youtube.com/@maharajan"
-  },
-  {
-    id: "yt-4",
-    title: "Top 5 Excel VBA Macros Every Office & School Admin Must Use in 2024",
-    channel: "Maharajan C / Tech & Education",
-    duration: "15:20",
-    views: "48K views",
-    category: "Automation & Excel",
-    description: "Save 10+ hours a week: automatic row highlight, consolidated workbooks, one-click PDF export, and duplicate removal scripts.",
-    tags: ["Excel", "VBA", "Macros", "Shortcuts"],
-    url: "https://youtube.com/@maharajan"
-  },
-  {
-    id: "yt-5",
-    title: "TNKalvi Special: EMIS Portal Tips, Tricks & Automated Marksheet Utilities",
-    channel: "TNKalvi & Tech Hub",
-    duration: "22:04",
-    views: "68K views",
+    id: "vid-2",
+    title: "Last Bench Creators: When the Project Due Date is in 2 Hours (3D Animated Skit)",
+    channel: "Last Bench Creators",
+    duration: "04:30",
+    views: "85K views",
     category: "Tech Guides",
-    description: "Comprehensive guidance in Tamil for teachers managing student database uploads, mark entries, and circular archives.",
-    tags: ["TNKalvi", "EMIS", "Tamil Tech", "Education"],
-    url: "https://youtube.com/@maharajan"
+    description: "Viral 3D animated comedy skit exploring terminal panic before project reviews. Modeled in Blender with custom character facial rigs and voiceover.",
+    tags: ["Blender 3D", "Animation", "Comedy", "Creators"],
+    url: "https://youtube.com/@lastbenchcreators"
   },
   {
-    id: "yt-6",
-    title: "Best Budget Hardware & Networking Gear for Small Offices (TechPickers Deep Dive)",
-    channel: "TechPickers",
-    duration: "24:50",
-    views: "19K views",
+    id: "vid-3",
+    title: "Arduino Uno R4 (RA4M1 32-Bit) + ST7789 Color TFT Display: 60 FPS Gauge Telemetry",
+    channel: "Maha Techz",
+    duration: "19:40",
+    views: "22K views",
     category: "IT & Networking",
-    description: "Benchmarking budget Gigabit routers, managed switches, and Cat6 patch cables to build maximum reliability on a minimal budget.",
-    tags: ["Hardware", "TechPickers", "Buying Guide", "Routers"],
-    url: "https://youtube.com/@maharajan"
+    description: "Wiring and programming hardware SPI DMA to draw custom automotive dashboard gauges and live analog sensor graphs at 60 frames per second.",
+    tags: ["Arduino R4", "ST7789", "TFT", "Hardware"],
+    url: "https://youtube.com/@mahatechz"
+  },
+  {
+    id: "vid-4",
+    title: "Building Techpickers: Sub-Millisecond Product Catalog with Cloudflare Workers & Supabase",
+    channel: "Maha Techz",
+    duration: "21:10",
+    views: "14K views",
+    category: "Google Workspace",
+    description: "Full-stack walkthrough architecting high-concurrency product specification lookups using Next.js App Router and edge caching strategies.",
+    tags: ["Next.js", "Supabase", "Cloudflare", "Edge"],
+    url: "https://youtube.com/@mahatechz"
+  },
+  {
+    id: "vid-5",
+    title: "TN Kalvi Online: How We Handle 50,000 Concurrent Students During Exam Results",
+    channel: "Maha Tech Automation",
+    duration: "16:45",
+    views: "42K views",
+    category: "Tech Guides",
+    description: "Deep dive into edge origin shielding, static asset distribution, and failover architectures that keep tnkalvi.online 100% online under extreme loads.",
+    tags: ["TN Kalvi", "Cloudflare", "Scaling", "Tamil Tech"],
+    url: "https://youtube.com/@mahatechautomation"
+  },
+  {
+    id: "vid-6",
+    title: "Last Bench Creators: Backbencher vs. Topper in Hardware Lab (3D Animation)",
+    channel: "Last Bench Creators",
+    duration: "05:12",
+    views: "64K views",
+    category: "Tech Guides",
+    description: "Relatable hardware lab storytelling: burning ICs, breadboard short circuits, and reverse-polarity capacitor explosions in stylized 3D animation.",
+    tags: ["3D Animation", "Student Life", "Blender", "Viral"],
+    url: "https://youtube.com/@lastbenchcreators"
   }
 ];
-
